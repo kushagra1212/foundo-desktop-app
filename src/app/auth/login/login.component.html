@@ -1,0 +1,41 @@
+<div class="main-container">
+  <div class="login-container">
+    <div class="login-text">
+      <h1>Login</h1>
+    </div>
+    <div class="login-form">
+      <form class="form">
+        <div class="form-group">
+          <mat-icon>alternate_email</mat-icon>
+          <input type="email" class="form-control" id="email"
+            placeholder="Email">
+        </div>
+        <div class="form-group">
+          <mat-icon>lock</mat-icon>
+          <input type="password" class="form-control" id="password"
+            placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+
+      <div class="login-footer">
+        <div class="login-footer-right">
+          <a routerLink="/auth/forgot-password"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page">Forgot Password ?</a>
+        </div>
+        <div class="login-footer-center">
+          <h3>New to Foundo ?</h3>
+          <a routerLink="/auth/signup" routerLinkActive="active"
+            ariaCurrentWhenActive="page">Create
+            Account</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="image">
+    <img alt="image"
+      src="assets/images/character1.png" />
+  </div>
+</div>
