@@ -4,18 +4,30 @@
       <h1>Login</h1>
     </div>
     <div class="login-form">
-      <form class="form">
+      <form class="form" [formGroup]="this.loginForm"
+        (ngSubmit)="onSubmit()">
         <div class="form-group">
           <mat-icon>alternate_email</mat-icon>
           <input type="email" class="form-control" id="email"
-            placeholder="Email">
+            placeholder="Email"
+            formControlName="email">
         </div>
         <div class="form-group">
           <mat-icon>lock</mat-icon>
-          <input type="password" class="form-control" id="password"
-            placeholder="Password">
+          <input [type]="!showPassword?'password':'text'" class="form-control"
+            id="password"
+            placeholder="Password"
+            formControlName="password">
+          <mat-icon class="password-icon"
+            (click)="showPassword=!showPassword">{{!showPassword?'visibility':'visibility_off'}}</mat-icon>
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button [disabled]="!loginForm.valid"
+          [ngClass]="{
+          'opacity-100': loginForm.valid,
+          'opacity-50': !loginForm.valid
+          }"
+          type="submit" class="btn
+          btn-primary">Login</button>
       </form>
 
       <div class="login-footer">

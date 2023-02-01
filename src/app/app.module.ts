@@ -1,5 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { RootStoreModule } from '../root-store/root-store.module';
+import { UserApiService } from '../services/user-api.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,13 +14,23 @@ import { SharedModule } from './shared/shared.module';
     AppComponent,
   ],
   imports: [
+
+    RootStoreModule,
     BrowserModule,
     AppRoutingModule,
     AuthModule,
     SharedModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+
 
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    UserApiService
+  ],
+  bootstrap: [AppComponent],
+
+
 })
 export class AppModule { }

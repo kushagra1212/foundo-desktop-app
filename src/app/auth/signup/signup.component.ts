@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
-
+  public showPassword: boolean = false;
 
   constructor() {
   }

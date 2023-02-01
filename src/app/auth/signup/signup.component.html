@@ -23,8 +23,11 @@
         </div>
         <div class="form-group">
           <mat-icon>lock</mat-icon>
-          <input type="password" class="form-control" id="password"
+          <input type="{{!showPassword?'password':''}}" class="form-control"
+            id="password"
             placeholder="Password">
+          <mat-icon class="password-icon"
+            (click)="showPassword=!showPassword">{{!showPassword?'visibility':'visibility_off'}}</mat-icon>
         </div>
         <button type="submit" class="btn btn-primary">Signup</button>
       </form>
