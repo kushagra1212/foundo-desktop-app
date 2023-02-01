@@ -5,6 +5,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { SignupComponent } from './signup/signup.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     CommonModule,
     AuthRoutingModule,
     MatIconModule,
+    SharedModule
 
   ],
   exports: [

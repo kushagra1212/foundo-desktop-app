@@ -20,7 +20,7 @@
   margin-top: 2em;
 }
 .login-text h1 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 3em;
 }
 .login-form {
@@ -58,6 +58,7 @@
   margin-top: 2em;
   box-shadow: $elevation20;
   font-size: 1.3em;
+  font-weight: 600;
 }
 .btn-primary:hover {
   animation: elevate 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
@@ -83,6 +84,9 @@
   justify-content: center;
   margin-top: 1em;
   align-items: center;
+}
+.login-footer-center a {
+  font-weight: 600;
 }
 .image {
   width: 40%;
