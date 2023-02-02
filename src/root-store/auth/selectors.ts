@@ -12,8 +12,8 @@ const getJWT = (state: State): string => state.jwt;
 
 const getIsLoading = (state: State): boolean => state.isLoading;
 const getIsLoggedIn = (state: State): boolean => state.isLoggedin;
-const getError = (state: State): string | null => state.error;
-const getMessage = (state: State): string | null => state.message;
+const getError = (state: State): boolean => state.error;
+const getMessage = (state: State): string => state.message;
 
 export const selectUserCurrent = createSelector(selectUser, getUser);
 export const selectUserJWT = createSelector(selectUser, getJWT);

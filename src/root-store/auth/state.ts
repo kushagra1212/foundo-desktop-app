@@ -6,7 +6,7 @@ export interface State {
   message: string;
   isLoading: boolean;
   isLoggedin: boolean;
-  error: string | null;
+  error: boolean;
 }
 
 export const initialState: State = {
@@ -15,5 +15,5 @@ export const initialState: State = {
   message: 'DUMMY_MESSAGE',
   isLoading: false,
   isLoggedin: false,
-  error: null,
+  error: false,
 };

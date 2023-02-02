@@ -29,7 +29,6 @@
           type="submit" class="btn
           btn-primary">Login</button>
       </form>
-
       <div class="login-footer">
         <div class="login-footer-right">
           <a routerLink="/auth/forgot-password"
@@ -46,8 +45,10 @@
     </div>
 
   </div>
+  <app-spinner [isLoading]="!!(isLoading | async)"></app-spinner>
+
   <div class="image">
     <img alt="image"
-      src="assets/images/character1.png" />
+      src="assets/images/character4.png" />
   </div>
 </div>

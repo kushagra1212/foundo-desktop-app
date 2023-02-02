@@ -6,6 +6,12 @@
   padding: 0%;
   font-family: "Palanquin Dark", sans-serif;
 }
+ul {
+  padding: 0;
+}
+input {
+  -webkit-background-clip: text !important;
+}
 
 .btn {
   background-color: $primary;
@@ -25,4 +31,33 @@
 }
 .opacity-100 {
   opacity: 1;
+}
+.toast-container.toast-top-center .ngx-toastr,
+.toast-container.toast-bottom-center .ngx-toastr {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.toast-container .ngx-toastr {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 6px;
+  padding: 15px 15px 15px 50px;
+  width: 300px;
+  border-radius: 10px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  box-shadow: 0 0 20px 3px #6a636336;
+  /* color: #000000; */
+  font-weight: 700;
+  backdrop-filter: blur(3px);
+}
+.toast-success {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+.toast-error {
+  background-color: #d32f2f;
+  color: #ffffff;
 }

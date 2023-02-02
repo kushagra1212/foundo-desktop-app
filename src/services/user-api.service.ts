@@ -9,10 +9,9 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class UserApiService {
-  private httpClient: HttpClient;
 
-  constructor(httpClient: HttpClient) {
-    this.httpClient = httpClient;
+
+  constructor(private http: HttpClient) {
   }
 
   login(email: string, password: string): Observable<any> {
@@ -20,6 +19,15 @@ export class UserApiService {
       email,
       password,
     };
-    return this.httpClient.post<any>(`${environment.api}/v1/user/signin`, params);
+    return this.http.post<any>(`${environment.api}/v1/user/signin`, params);
+  }
+  signup({ email, password, firstName, lastName }: any): Observable<any> {
+    const params = {
+      email,
+      password,
+      firstName,
+      lastName
+    };
+    return this.http.post<any>(`${environment.api}/v1/user/signup`, params);
   }
 }

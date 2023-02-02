@@ -1,16 +1,15 @@
 import { createReducer, on, Action } from '@ngrx/store';
 import * as AuthActions from './actions';
-import { State } from './state';
+import { initialState, State } from './state';
 
 
 
 const authReducer = createReducer(
-  {},
+  initialState,
   on(AuthActions.login, (state, action) => {
     return {
       ...state,
       isLoading: true,
-      error: null,
     };
   }
   ),
@@ -18,18 +17,19 @@ const authReducer = createReducer(
     return {
       ...state,
       user: payload.user,
-      message: payload.message,
+      message: `Welcome, ${payload.user.firstName} !`,
       jwt: payload.jwtToken,
       isLoading: false,
       isLoggedin: true,
-      error: null,
+      error: false,
     };
   }),
   on(AuthActions.loginFailure, (state, { payload }) => {
     return {
       ...state,
       isLoading: false,
-      error: payload.errorMessage,
+      error: true,
+      message: payload.error.errorMessage,
     };
   }),
 );

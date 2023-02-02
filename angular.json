@@ -24,7 +24,11 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/foundo.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/square-jelly-box.css",
+              "src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {

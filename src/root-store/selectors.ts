@@ -16,5 +16,5 @@ export const selectJWT = createSelector(
 );
 export const selectAuthError = createSelector(
   AuthSelectors.selectUserError,
-  (errorMessage: string | null) => errorMessage,
+  (errorMessage: boolean | null) => errorMessage,
 );
