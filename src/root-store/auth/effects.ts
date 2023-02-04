@@ -23,7 +23,8 @@ export class AuthEffects {
     private store$: Store<RootStoreState.State>,
     private authApiService: AuthApiService,
     private sharedApiService: SharedApiService,
-    private localStorageService: localstorageService
+    private localStorageService: localstorageService,
+    private route: Router
   ) { }
   login$ = createEffect(() =>
     this.actions$.pipe(
@@ -87,7 +88,9 @@ export class AuthEffects {
             timeOut: 2000,
           });
         }
-        this.router.navigate(['home']);
+        if (this.route.routerState.snapshot.url.includes('/auth')) {
+          this.router.navigate(['home']);
+        }
       })
     ),
     { dispatch: false }

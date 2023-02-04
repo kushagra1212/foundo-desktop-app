@@ -11,13 +11,13 @@ const routes: Routes = [
   },
   {
     path: 'feed',
-    loadChildren: () => import('./feed/feed.module').then(m => m.FeedModule),
-    canActivate: [AuthguardGuard]
+    loadChildren: () => import('./feed/feed.module').then(m => m.FeedModule), canActivate: [AuthguardGuard],
+
   },
   {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule),
-    canActivate: [AuthguardGuard]
+    canActivate: [AuthguardGuard],
   },
 ];
 

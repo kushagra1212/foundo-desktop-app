@@ -13,6 +13,6 @@ export class PageNotFoundComponent {
   }
 
   goBack(): void {
-    this.router.navigate(['auth'])
+    window.location.href = `${window.location.origin}`;
   }
 }
