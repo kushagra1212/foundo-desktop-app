@@ -16,6 +16,9 @@ import { environment } from 'src/environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { HomeRoutingModule } from './home/home-routing.module';
 import { HomeModule } from './home/home.module';
+import { AuthApiService } from 'src/services/auth-api.service';
+import { SharedApiService } from 'src/services/shared-api.service';
+import { localstorageService } from 'src/services/localstorage.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,10 +56,17 @@ import { HomeModule } from './home/home.module';
       : [],
   ],
   providers: [
-    UserApiService
+    UserApiService,
+    AuthApiService,
+    SharedApiService,
+    localstorageService
   ],
   bootstrap: [AppComponent],
 
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {
+
+
+
+}

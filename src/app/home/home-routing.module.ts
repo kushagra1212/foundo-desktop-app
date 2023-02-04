@@ -1,13 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FeedComponent } from './feed/feed.component';
+import { AuthguardGuard } from '../shared/authguard.guard';
 
 
 
 // The order of the routes in the configuration matters - first-match wins strategy
 const routes: Routes = [
-  { path: '', redirectTo: 'feed', pathMatch: 'full' },
-  { path: 'feed', component: FeedComponent },
+  {
+    path: '', redirectTo: 'feed', pathMatch: 'full'
+  },
+  {
+    path: 'feed',
+    loadChildren: () => import('./feed/feed.module').then(m => m.FeedModule),
+    canActivate: [AuthguardGuard]
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule),
+    canActivate: [AuthguardGuard]
+  },
 ];
 
 @NgModule({

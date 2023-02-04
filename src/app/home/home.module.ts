@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FeedComponent } from './feed/feed.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FeedModule } from './feed/feed.module';
 
 
 
 @NgModule({
   declarations: [
-    FeedComponent
   ],
   imports: [
     CommonModule,
@@ -21,9 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FeedModule
   ],
   exports: [
-    FeedComponent
+    FeedModule
   ]
 })
 export class HomeModule { }

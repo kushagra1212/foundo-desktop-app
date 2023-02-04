@@ -18,7 +18,6 @@ const authReducer = createReducer(
       ...state,
       user: payload.user,
       message: `Welcome, ${payload.user.firstName} !`,
-      jwt: payload.jwtToken,
       isLoading: false,
       isLoggedin: true,
       error: false,
@@ -30,6 +29,12 @@ const authReducer = createReducer(
       isLoading: false,
       error: true,
       message: payload.error.errorMessage,
+    };
+  }),
+  on(AuthActions.resetPasswordLinkSent, (state, { payload }) => {
+    return {
+      ...state,
+      resetPasswordLinkSent: payload.status,
     };
   }),
 );
