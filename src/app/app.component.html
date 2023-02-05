@@ -1,4 +1,5 @@
-<div>
-  <app-spinner [isLoading]="!!(isLoading | async)"></app-spinner>
-  <router-outlet></router-outlet>
-</div>
+
+<app-spinner [isLoading]="!!(isLoading | async)"></app-spinner>
+
+<app-header *ngIf="(this.isLoggedIn | async)"></app-header>
+<router-outlet></router-outlet>

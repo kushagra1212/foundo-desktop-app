@@ -5,23 +5,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     BackButtonComponent,
     SpinnerComponent,
     PageNotFoundComponent,
+    HeaderComponent,
   ],
-  imports: [
-    CommonModule,
-    MatIconModule,
-    NgxSpinnerModule
-  ],
+  imports: [CommonModule, MatIconModule, NgxSpinnerModule],
   exports: [
     BackButtonComponent,
-    SpinnerComponent
-  ]
+    SpinnerComponent,
+    PageNotFoundComponent,
+    HeaderComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}
