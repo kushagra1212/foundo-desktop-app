@@ -1,0 +1,34 @@
+<section class="header">
+  <span
+    *ngIf="this.includeRoute('/feed')"
+    class="material-icons icon-filled">dashboard</span>
+  <button *ngIf="!this.includeRoute('/feed')"
+    (click)="this.router.navigate(['/home/feed'])" class="none-button">
+    <span class="material-icons icon
+      outlined">dashboard</span>
+  </button>
+  <mat-icon
+    *ngIf="this.includeRoute('/add-post')" class="icon-filled">add_circle</mat-icon>
+  <button *ngIf="!this.includeRoute('/add-post')"
+    (click)="this.router.navigate(['/home/add-post'])"
+    class="none-button">
+    <mat-icon class="icon">add_circle_outline</mat-icon>
+  </button>
+  <mat-icon onclick="router.navigate(['/profile'])"
+    *ngIf="this.includeRoute('/profile')" class="icon-filled">person</mat-icon>
+  <button *ngIf="!this.includeRoute('/profile')"
+    (click)="this.router.navigate(['/home/profile'])"
+    class="none-button">
+    <mat-icon class="icon">person_outline</mat-icon>
+  </button>
+  <mat-icon onclick="router.navigate(['/chat'])"
+    *ngIf="this.includeRoute('/chat')" class="icon-filled">
+    chat_bubble</mat-icon>
+  <button *ngIf="!this.includeRoute('/chat')"
+    (click)="this.router.navigate(['/home/chat'])"
+    class="none-button">
+    <mat-icon class="icon">
+      chat_bubble_outline</mat-icon>
+  </button>
+
+</section>

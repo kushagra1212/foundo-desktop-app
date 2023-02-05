@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BackButtonComponent } from './back-button/back-button.component';
 import { MatIconModule } from '@angular/material/icon';
-import { SpinnerComponent } from './spinner/spinner.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { SideBarComponent } from './header/side-bar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { HeaderComponent } from './header/header.component';
+import { BackButtonComponent } from './back-button/back-button.component';
 
 @NgModule({
-  declarations: [
-    BackButtonComponent,
+  exports: [
     SpinnerComponent,
+    SideBarComponent,
     PageNotFoundComponent,
-    HeaderComponent,
+    BackButtonComponent,
+  ],
+  declarations: [
+    SpinnerComponent,
+    SideBarComponent,
+    PageNotFoundComponent,
+    BackButtonComponent,
   ],
   imports: [CommonModule, MatIconModule, NgxSpinnerModule],
-  exports: [
-    BackButtonComponent,
-    SpinnerComponent,
-    PageNotFoundComponent,
-    HeaderComponent,
-  ],
 })
 export class SharedModule {}

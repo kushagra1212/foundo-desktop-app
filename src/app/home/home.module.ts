@@ -4,10 +4,13 @@ import { HomeRoutingModule } from './home-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './home.component';
+import { SharedModule } from '../shared/shared.module';
+import { ProfileComponent } from './profile/profile.component';
+import { AddPostComponent } from './add-post/add-post.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [ProfileComponent, AddPostComponent, ChatComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
@@ -15,6 +18,7 @@ import { HomeComponent } from './home.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    SharedModule,
   ],
   exports: [],
 })

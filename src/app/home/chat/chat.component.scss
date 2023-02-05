@@ -1,0 +1,9 @@
+@use "/src/UI/colors.scss" as color;
+@use "/src/UI/elevations.scss" as elevation;
+.chat {
+  background-color: color.$lightGrayPrimary;
+  height: 100%;
+  width: 88%;
+  position: absolute;
+  left: 12%;
+}

@@ -18,6 +18,7 @@ import { HomeModule } from './home/home.module';
 import { AuthApiService } from 'src/services/auth-api.service';
 import { SharedApiService } from 'src/services/shared-api.service';
 import { localstorageService } from 'src/services/localstorage.service';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -49,6 +50,7 @@ import { localstorageService } from 'src/services/localstorage.service';
           logOnly: environment.production, // Restrict extension to log-only mode
         })
       : [],
+    SharedModule,
   ],
   providers: [
     UserApiService,
@@ -58,6 +60,6 @@ import { localstorageService } from 'src/services/localstorage.service';
   ],
   bootstrap: [AppComponent],
 
-  exports: [],
+  exports: [SharedModule],
 })
 export class AppModule {}
