@@ -6,8 +6,6 @@
   flex-direction: row;
   justify-content: space-around;
   margin-top: 1em;
-  background-color: Color.$lightGrayPrePrimary;
-  color: Color.$black;
 }
 .container p .first {
   font-size: 3em;
@@ -29,4 +27,6 @@
   width: 1em;
   padding: 0em;
   margin: 0em;
+  background-color: Color.$lightGrayPrePrimary;
+  color: Color.$black;
 }

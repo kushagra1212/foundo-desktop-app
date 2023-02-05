@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @use "./UI/colors.scss" as *;
+@use "./UI/elevations.scss" as *;
 @import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;300&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
 * {
@@ -83,4 +84,23 @@ input {
   to {
     transform: scale(1);
   }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #656d78;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
 }
