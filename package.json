@@ -29,6 +29,7 @@
     "@ngrx/store": "^15.2.1",
     "@ngrx/store-devtools": "^15.2.1",
     "electron": "^22.1.0",
+    "ngx-infinite-scroll": "^15.0.0",
     "ngx-spinner": "^15.0.1",
     "ngx-toastr": "^16.0.2",
     "rxjs": "~7.8.0",

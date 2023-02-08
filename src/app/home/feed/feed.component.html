@@ -2,7 +2,19 @@
   <app-side-bar></app-side-bar>
   <section class="feed">
     <app-search-header></app-search-header>
-    <app-nav></app-nav>
-    <app-post-list></app-post-list>
+    <app-nav
+      [isFound]="this.isFound"
+      (isFoundChange)="isFoundChange($event)"
+    ></app-nav>
+    <app-post-list
+      *ngIf="isFound === 1"
+      [posts]="this.posts"
+      (onScroll)="onScroll()"
+    ></app-post-list>
+    <app-post-list
+      *ngIf="isFound === 0"
+      [posts]="this.posts"
+      (onScroll)="onScroll()"
+    ></app-post-list>
   </section>
 </div>

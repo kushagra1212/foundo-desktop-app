@@ -2,7 +2,7 @@
   <header>
     <img
       class="img"
-      src="https://picsum.photos/200/300"
+      src="{{ post.thumbnail }}"
       alt="image"
       width="200"
       height="200"
@@ -10,36 +10,32 @@
   </header>
   <section class="main">
     <div class="top">
-      <p>Item Name</p>
-      <p>Item Catagory</p>
+      <p>{{ post.itemName }}</p>
+      <p>{{ post.category }}</p>
     </div>
     <p class="beg-mid">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-      voluptates, quod, quia, quae voluptatibus voluptatem quibusdam voluptatum
-      quos quas quidem nesciunt. Quisquam, voluptates, quod, quia, quae
-      voluptatibus voluptatem quibusdam voluptatum quos quas quidem nesciunt.
-      Quisquam,
+      {{ post.description }}
     </p>
     <div class="sub-mid">
       <div class="date">
         <mat-icon> query_builder </mat-icon>
-        <p>Mon Oct 12 2020</p>
+        <p>{{ post.dateTime | date }}</p>
       </div>
       <div class="location">
         <mat-icon> location_on </mat-icon>
-        <p>Location</p>
+        <p>{{ post.city }}</p>
       </div>
     </div>
     <div class="bottom">
-      <div class="color">Black</div>
-      <div class="brand">Samsung</div>
+      <div class="color">{{ post.color }}</div>
+      <div class="brand">{{ post.brand }}</div>
     </div>
   </section>
   <section class="end">
     <button class="btn">View</button>
     <div>
       <p>Posted by</p>
-      <p class="name">&nbsp;Rohan</p>
+      <p class="name">&nbsp;{{ post.firstName }}</p>
     </div>
   </section>
 </section>

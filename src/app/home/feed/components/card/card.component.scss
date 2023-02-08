@@ -19,6 +19,7 @@
   font-size: small;
   position: relative;
   background-color: Color.$white;
+  margin-top: -20px;
 }
 .main .top {
   display: flex;
@@ -34,7 +35,7 @@
 .beg-mid {
   text-align: justify;
   margin: 0.5em;
-  height: 5em;
+  height: 2em;
   overflow-y: auto;
 }
 .sub-mid {

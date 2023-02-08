@@ -1,21 +1,12 @@
-<section class="post-list">
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
+<section
+  infinite-scroll
+  [infiniteScrollDistance]="10"
+  [infiniteScrollThrottle]="1000"
+  [scrollWindow]="false"
+  (scrolled)="this.onScrollEmit()"
+  class="main"
+>
+  <section class="posts" *ngFor="let post of this.posts">
+    <app-card [post]="post"></app-card>
+  </section>
 </section>

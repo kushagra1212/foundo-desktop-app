@@ -64,6 +64,10 @@ input {
   background-color: #d32f2f;
   color: #ffffff;
 }
+.toast-info {
+  background-color: #2196f3;
+  color: #ffffff;
+}
 .none-btn {
   background-color: transparent;
   border: none;
@@ -87,12 +91,12 @@ input {
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 0.2em;
+  width: 0.1em;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: white;
+  //  background: white;
 }
 
 /* Handle */
@@ -102,5 +106,5 @@ input {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: white;
+  // background: white;
 }

@@ -1,6 +1,18 @@
 <section class="nav">
-  <button class="btn lost-btn not-active">Lost</button>
-  <button class="btn found-btn">Found</button>
+  <button
+    (click)="changeisFoundHandler(0)"
+    class="btn lost-btn"
+    [ngClass]="{ 'not-active': isFound === 1 }"
+  >
+    Lost
+  </button>
+  <button
+    (click)="changeisFoundHandler(1)"
+    class="btn found-btn"
+    [ngClass]="{ 'not-active': isFound === 0 }"
+  >
+    Found
+  </button>
 
   <span
     class="btn material-icons filter-btn"

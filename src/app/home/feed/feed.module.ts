@@ -8,6 +8,7 @@ import { SearchHeaderComponent } from './components/search-header/search-header.
 import { MatIconModule } from '@angular/material/icon';
 import { NavComponent } from './components/nav/nav.component';
 import { CardComponent } from './components/card/card.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,13 @@ import { CardComponent } from './components/card/card.component';
     CardComponent,
     CardComponent,
   ],
-  imports: [CommonModule, FeedRoutingModule, SharedModule, MatIconModule],
+  imports: [
+    CommonModule,
+    FeedRoutingModule,
+    SharedModule,
+    MatIconModule,
+    InfiniteScrollModule,
+  ],
   exports: [],
 })
 export class FeedModule {}

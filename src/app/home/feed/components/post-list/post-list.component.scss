@@ -1,13 +1,14 @@
 @use "/src/UI/colors.scss" as Color;
 @use "/src/UI/elevations.scss" as *;
-.post-list {
+.main {
   width: calc(100% - 2em);
   height: calc(100vh - 12em);
   margin: 1em;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(30em, 1fr));
   grid-gap: 1em;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /* overflow-y: scroll; */
+  overflow: scroll;
+}
+.posts {
 }
