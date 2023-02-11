@@ -1,0 +1,44 @@
+<div>
+  <div mat-dialog-actions class="header">
+    <button (click)="onCancelEmit()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <div><h3>Filter</h3></div>
+    <button (click)="onResetEmit()">
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-content>
+    <app-expand-card
+      [title]="'Category'"
+      [text]="'View All'"
+      type="NEXT_SCREEN"
+      (onExpand)="showColors = !showColors"
+    ></app-expand-card>
+    <app-expand-card
+      [title]="'Color'"
+      [type]="'CURRENT_SCREEN'"
+      (onExpand)="showColors = !showColors"
+    ></app-expand-card>
+    <app-expand-card
+      [title]="'Brand'"
+      [type]="'CURRENT_SCREEN'"
+      [hasInput]="true"
+      (onExpand)="showColors = !showColors"
+    ></app-expand-card>
+    <div class="check-box">
+      <mat-icon>check_box_outline_blank</mat-icon>
+      <span>Get the latest At Top</span>
+    </div>
+    <div *ngIf="this.showColors">
+      <div class="colors" *ngFor="let color of this.colors">
+        <app-color [name]="color[0] | titlecase" [color]="color[1]"></app-color>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-primary find-btn" (click)="onSubmit()">
+        Find
+      </button>
+    </div>
+  </div>
+</div>

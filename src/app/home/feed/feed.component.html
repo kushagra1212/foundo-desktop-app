@@ -1,10 +1,16 @@
 <div class="container">
+  <div
+    [ngClass]="{
+      'back-drop': this.show
+    }"
+  ></div>
   <app-side-bar></app-side-bar>
   <section class="feed">
     <app-search-header></app-search-header>
     <app-nav
       [isFound]="this.isFound"
       (isFoundChange)="isFoundChange($event)"
+      (filterChange)="openDialog()"
     ></app-nav>
     <app-post-list
       *ngIf="isFound === 1"
@@ -17,4 +23,10 @@
       (onScroll)="onScroll()"
     ></app-post-list>
   </section>
+  <ng-template #callAPIDialog>
+    <app-filter-component
+      (onCancel)="this.closeDialog()"
+      (onReset)="this.closeDialog()"
+    ></app-filter-component>
+  </ng-template>
 </div>

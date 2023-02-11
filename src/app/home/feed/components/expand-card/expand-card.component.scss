@@ -1,0 +1,20 @@
+@use "/src/UI/colors.scss" as color;
+@use "/src/UI/elevations.scss" as elevation;
+.main {
+  height: 4em;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: elevation.$elevation30;
+  border-radius: 1em;
+  padding: 0 1em;
+  margin-bottom: 1em;
+}
+
+.end-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

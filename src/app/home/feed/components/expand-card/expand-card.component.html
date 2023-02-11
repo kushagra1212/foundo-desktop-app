@@ -1,0 +1,19 @@
+<section class="main">
+  <h3>{{ this.title }}</h3>
+  <div class="end-div">
+    <h3>
+      {{ !this.isExpandCardCurrentScreen() ? this.text : "" }}
+    </h3>
+    <button class="none-btn" (click)="toggle()">
+      <mat-icon>
+        {{
+          !this.isExpandCardCurrentScreen()
+            ? "keyboard_arrow_right"
+            : this.open
+            ? "keyboard_arrow_down"
+            : "keyboard_arrow_up"
+        }}
+      </mat-icon>
+    </button>
+  </div>
+</section>

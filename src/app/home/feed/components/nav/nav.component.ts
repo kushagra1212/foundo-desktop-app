@@ -7,11 +7,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class NavComponent {
   @Input() isFound: number;
+  @Input() show: boolean;
   @Output() isFoundChange: EventEmitter<number> = new EventEmitter<number>();
-
+  @Output() filterChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   constructor() {}
 
   changeisFoundHandler(isFound: number) {
     this.isFoundChange.emit(isFound);
+  }
+  filterHandler(show: boolean) {
+    this.filterChange.emit(show);
   }
 }

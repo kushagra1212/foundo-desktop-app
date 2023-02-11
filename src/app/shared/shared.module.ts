@@ -6,6 +6,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { SideBarComponent } from './header/side-bar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BackButtonComponent } from './back-button/back-button.component';
+import { ColorComponent } from './atoms/color/color.component';
 
 @NgModule({
   exports: [
@@ -13,12 +14,14 @@ import { BackButtonComponent } from './back-button/back-button.component';
     SideBarComponent,
     PageNotFoundComponent,
     BackButtonComponent,
+    ColorComponent,
   ],
   declarations: [
     SpinnerComponent,
     SideBarComponent,
     PageNotFoundComponent,
     BackButtonComponent,
+    ColorComponent,
   ],
   imports: [CommonModule, MatIconModule, NgxSpinnerModule],
 })

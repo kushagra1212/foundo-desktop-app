@@ -1,0 +1,52 @@
+@use "/src/UI/colors.scss" as Color;
+@use "/src/UI/elevations.scss" as elevation;
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  background-color: white;
+  color: Color.$black;
+  font-size: 1.2em;
+  font-weight: 500;
+  // Animate the buttons
+  transition: all 0.2s ease-in-out;
+}
+// Animate the button
+.header button:hover {
+  transform: scale(1.1);
+}
+
+.header title {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: Color.$black;
+}
+.check-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1em 0;
+  opacity: 0.8;
+}
+.find-btn {
+  width: 100%;
+  height: 2.5em;
+  border-radius: 0.8em;
+  background-color: Color.$primary;
+  color: Color.$white;
+  font-size: 1.5em;
+  font-weight: 600;
+  box-shadow: elevation.$elevation20;
+}
+.colors {
+  width: 100%;
+  height: 4em;
+  display: flex;
+}

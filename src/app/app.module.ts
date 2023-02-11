@@ -20,6 +20,7 @@ import { SharedApiService } from 'src/services/shared-api.service';
 import { localstorageService } from 'src/services/localstorage.service';
 import { SharedModule } from './shared/shared.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -32,7 +33,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule, // required animations module
+    BrowserAnimationsModule,
+    // required animations module
     ToastrModule.forRoot({
       closeButton: true,
       progressBar: true,

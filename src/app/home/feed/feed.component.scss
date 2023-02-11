@@ -13,3 +13,12 @@
   height: 100%;
   background-color: color.$lightGrayPrimary;
 }
+.back-drop {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: color.$black;
+  opacity: 0.9;
+  z-index: 1;
+  backdrop-filter: blur(3px);
+}
